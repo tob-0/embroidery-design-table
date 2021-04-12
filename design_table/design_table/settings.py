@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'livereload',
     'django.contrib.staticfiles',
     'design_display',
+    'design_upload',
 ]
 
 MIDDLEWARE = [
