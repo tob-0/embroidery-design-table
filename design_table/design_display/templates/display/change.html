@@ -1,0 +1,25 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static "css/tailwind.css"%}">
+
+    <title>Design display</title>
+</head>
+<body>
+    <div class="w-screen h-screen flex bg-gray-100">
+        <div class="m-auto">
+            <form action="post" method="post" class="flex flex-col bg-white rounded shadow p-4 w-96">
+                {% csrf_token %}
+                <label for="new_url">URL</label>
+                <input class="border p-1 my-4" type="text" name="new_url" id="new_url" value="{{current_url}}">
+                <button class="font-bold bg-blue-500 text-white p-1 rounded m-auto" type="submit">Change URL</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
